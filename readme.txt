@@ -1,4 +1,4 @@
-Thank you for using our template!
+code made by Tahir
 
 For more awesome templates please visit https://colorlib.com/wp/templates/
 
