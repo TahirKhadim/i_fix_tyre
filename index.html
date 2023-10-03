@@ -23,6 +23,7 @@
 
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/style.css">
+
 	<style>
 		.circular-container {
 			width: 100px;
@@ -175,6 +176,48 @@
 			background: #ffd903;
 
 		}
+
+		.para1 {
+			position: relative;
+			display: grid;
+			justify-content: center;
+			align-items: start;
+			top: 0;
+			left: 0;
+
+
+
+
+
+		}
+
+		.list li {
+
+			font-size: 4vh;
+			color: #ffc436;
+			font-weight: 900;
+
+		}
+
+		li a {
+			color: rgb(234, 224, 224);
+			font-size: larger;
+
+		}
+
+		.navbar li a {
+			font-size: 3vh;
+
+			margin-left: 20px;
+		}
+
+		.navbar .button {
+			font-size: 3vh;
+		}
+
+		.navbar-brand {
+			font-size: 3vh;
+		}
 	</style>
 	<!--  End call svg Styling -->
 </head>
@@ -182,16 +225,19 @@
 <body>
 
 	<div class="wrap">
-		<div class="container">
+		<div class="container-fluid">
 			<div class="row">
-				<div class="col-md-6 d-flex align-items-center">
+				<div class="col-md-3 d-flex align-items-center justify-content-around">
+					<img src="images/logo.png" alt="" width="170px" class="img-fluid">
+				</div>
+				<div class="col-md-6 d-flex align-items-center justify-content-center">
 					<p class="mb-0 phone pl-md-2">
 						<a href="Tel:+447916312844" class="mr-2"><span class="fa fa-phone mr-1"></span>
 							+447916312844</a>
 						<a href="#"><span class="fa fa-paper-plane mr-1"></span> contact@ifixtyre.com</a>
 					</p>
 				</div>
-				<div class="col-md-6 d-flex justify-content-md-end">
+				<div class="col-md-3 d-flex align-items-center">
 					<div class="social-media">
 						<p class="mb-0 d-flex">
 							<a href="" class="d-flex align-items-center justify-content-center"><span
@@ -206,44 +252,74 @@
 			</div>
 		</div>
 	</div>
-	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-		<div class="container">
-			<img src="images/logo.png" alt="logo" class="img-fluid" width="120px" height="120px">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-				aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="fa fa-bars"></span> Menu
+	<!-- ========== Start Section ========== -->
+	<nav class="navbar navbar-expand-lg  navbar-dark bg-dark ">
+		<div class="container-fluid">
+			<a class="navbar-brand font-weight-bold " href="#">For Emergency</a>
+			<div class="btn btn-warning button"><a href="tel:+447916312844">+447916312844</a></div>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse" id="ftco-nav">
-				<ul class="navbar-nav ml-auto">
-					<li class="nav-item "><a href="index.html" class="nav-link">Home</a></li>
-					<li class="nav-item "><a href="mobiletyrefitting.html" class="nav-link">Mobile Tyre Fitting</a></li>
+			<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+				<ul class="navbar-nav ">
+					<li class="nav-item">
+						<a class="nav-link active " aria-current="page" href="index.html">Home</a>
+					</li>
 
-					<li class="nav-item "><a href="breakdown.html" class="nav-link">BreakDown</a></li>
+					<li class="nav-item "><a href="mobiletyrefitting.html" class="nav-link">Mobile Tyre
+							Fitting</a></li>
+
+					<li class="nav-item"><a href="breakdown.html" class="nav-link">BreakDown</a></li>
 					<li class="nav-item "><a href="jumpstart.html" class="nav-link">Jumpstart</a></li>
-					<li class="nav-item"><a href="about.html" class="nav-link">About US</a></li>
+
 					<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-					<li class="nav-item active"><a href="contact.php" class="nav-link">Contact Us</a></li>
-					<!-- <li class="nav-item"><a href="" class="nav-link">Contact</a></li> -->
+					<li class="nav-item "><a href="contact.php" class="nav-link">Contact Us</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
+
+	<!-- ========== End Section ========== -->
+
+
+
 	<!-- END nav -->
+
+	<!-- ========== Start Section navbar ========== -->
+	<!-- Navbar -->
+
+	<!-- Navbar -->
+
+	<!-- ========== End Section navbar ========== -->
 	<div class="hero-wrap js-fullheight" style="background-image: url('pics/6.jpg');"
 		data-stellar-background-ratio="0.5">
 		<div class="overlay"></div>
 		<div class="container">
-			<div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center"
+			<div class="row  slider-text js-fullheight align-items-start justify-content-center"
 				data-scrollax-parent="true">
-				<div class="col-md-12 ftco-animate text-center">
-					<h1 class="mb-4 para1" style="color: #ffc436; text-shadow: 5px 5px 8px #070707;">"24/7 Mobile Tire
-						Rescue - Your
-						Flat Tire Solution Around the Clock!" </h1>
+				<div class="col-md-12 ftco-animate text-center  ">
+					<h1 class="  para1 mt-3 py-5" style="color: #ffc436; text-shadow: 5px 5px 8px #070707;">
+						24/7 Tyre Fix
+						Emergency Service </h1>
+
+					<div class="list text-lg-left mt-5 font-weight-bold">
+						<ul>
+							<li>Tyre Flat</li>
+							<li>Tyre Puncture</li>
+							<li>Tyre Inflate</li>
+						</ul>
+					</div>
+
+
 				</div>
 			</div>
+
 		</div>
 	</div>
-	<!-- Serveice section -->
+	</div>
+	<!-- Serveice section --
 	<section class="ftco-section bg-light">
 		<div class="container">
 			<div class="row">
@@ -256,7 +332,7 @@
 						<div class="text pt-3 px-3 pb-4 text-center">
 							<h3> Roadside Assistance</h3>
 							<div class="faded">
-								<p> Swift aid for vehicle troubles, including jump-starts, flat tire assistance, and
+								<p> Swift aid for vehicle troubles, including jump-starts, flat tyre assistance, and
 									refueling, ensuring you reach your destination trouble-free.</p>
 
 							</div>
@@ -294,7 +370,7 @@
 							<h3>Mobile Tyre Service</h3>
 
 							<div class="faded">
-								<p>On-the-spot tire solutions, from flat tire repairs to mobile fitting, keeping you
+								<p>On-the-spot tyre solutions, from flat tyre repairs to mobile fitting, keeping you
 									moving safely.<br><br>
 								</p>
 
@@ -430,7 +506,7 @@
 								<h4>Expertise and Experience</h4>
 								<p>Clients choose us for our extensive expertise and years of experience in providing
 									top-notch services. Our track record of successfully handling breakdowns, accidents,
-									flat tires, and refueling situations instills confidence.</p>
+									flat tyres, and refueling situations instills confidence.</p>
 							</div>
 						</div>
 						<div class="col-md-6 services-2 w-100 d-flex">
@@ -521,8 +597,8 @@
 								<div class="icon d-flex align-items-center justify-content-center"><span
 										class="fa fa-quote-left"></span></div>
 								<div class="text">
-									<p class="mb-4">I was in a hurry when I got a flat tire, but your mobile tire
-										service came to the rescue. The technician arrived quickly, repaired my tire
+									<p class="mb-4">I was in a hurry when I got a flat tyre, but your mobile tyre
+										service came to the rescue. The technician arrived quickly, repaired my tyre
 										efficiently, and I was back on the road in no time. Great service</p>
 									<div class="d-flex align-items-center">
 										<div class="user-img" style="background-image: url(pics/roger.jpg)"></div>
@@ -539,7 +615,7 @@
 										class="fa fa-quote-left"></span></div>
 								<div class="text">
 									<p class="mb-4">I can't thank your team enough for the convenience you provided. I
-										had a tire blowout during a family trip, and your mobile tire service saved the
+										had a tyre blowout during a family trip, and your mobile tyre service saved the
 										day. Professional, friendly, and fast—highly recommended!</p>
 									<div class="d-flex align-items-center">
 										<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
@@ -555,7 +631,7 @@
 								<div class="icon d-flex align-items-center justify-content-center"><span
 										class="fa fa-quote-left"></span></div>
 								<div class="text">
-									<p class="mb-4">I used your mobile tire service for a tire change, and I'm
+									<p class="mb-4">I used your mobile tyre service for a tyre change, and I'm
 										impressed. The technician was punctual, and the service was affordable. Having
 										this option is a lifesaver, especially for busy professionals like me.</p>
 									<div class="d-flex align-items-center">
@@ -572,10 +648,10 @@
 								<div class="icon d-flex align-items-center justify-content-center"><span
 										class="fa fa-quote-left"></span></div>
 								<div class="text">
-									<p class="mb-4">I had a flat tire late at night, and your
-										24/7 mobile tire
+									<p class="mb-4">I had a flat tyre late at night, and your
+										24/7 mobile tyre
 										service
-										was a blessing. The technician arrived quickly, and the entire process was
+										was a blessing. The technician arrived quickly, and the entyre process was
 										hassle-free. I'll definitely keep your number handy for future emergencies.</p>
 									<div class="d-flex align-items-center">
 										<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
@@ -591,9 +667,9 @@
 								<div class="icon d-flex align-items-center justify-content-center"><span
 										class="fa fa-quote-left"></span></div>
 								<div class="text">
-									<p class="mb-4">I had a tire issue in the pouring rain, and your mobile tire service
+									<p class="mb-4">I had a tyre issue in the pouring rain, and your mobile tyre service
 										was a true lifesaver. The technician arrived promptly and even checked the
-										pressure on all my tires. Exceptional service, especially when you're in a pinch
+										pressure on all my tyres. Exceptional service, especially when you're in a pinch
 									</p>
 									<div class="d-flex align-items-center">
 										<div class="user-img" style="background-image: url(pics/laura.jpeg)"></div>
@@ -668,10 +744,10 @@
 						<ul>
 							<li><span class="icon fa fa-map"></span><span class="text"> 10-16 tiller road, canary wharf,
 									E14 8PX</span></li>
-							<li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+44 492 3429
-										410</span></a></li>
+							<li><a href="tel:+447916312844"><span class="icon fa fa-phone"></span><span
+										class="text">+447916312844</span></a></li>
 							<li><a href="#"><span class="icon fa fa-paper-plane"></span><span
-										class="text">info@tyrefix.com</span></a></li>
+										class="text">info@ifixtyre.com</span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -680,7 +756,7 @@
 				<div class="col-md-12 text-center">
 					<p class="copyright">
 						Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script> Tyre Fix All rights reserved
+						<script>document.write(new Date().getFullYear());</script> I Fix Tyre All rights reserved
 					</p>
 				</div>
 			</div>
@@ -715,6 +791,9 @@
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 	<script src="js/google-map.js"></script>
 	<script src="js/main.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
 
 
 
