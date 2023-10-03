@@ -1,20 +1,4 @@
-<?php
 
-
-include("connection.php");
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-
-
-
-
-//Load Composer's autoloader
-require 'vendor/autoload.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -191,6 +175,20 @@ require 'vendor/autoload.php';
       width: 100%;
       height: auto;
     }
+
+    .navbar li a {
+      font-size: 3vh;
+
+      margin-left: 20px;
+    }
+
+    .navbar .button {
+      font-size: 3vh;
+    }
+
+    .navbar-brand {
+      font-size: 3vh;
+    }
   </style>
   <!--  End call svg Styling -->
 
@@ -199,22 +197,25 @@ require 'vendor/autoload.php';
 <body>
 
   <div class="wrap">
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-md-6 d-flex align-items-center">
+        <div class="col-md-3 d-flex align-items-center justify-content-around">
+          <img src="images/logo.png" alt="" width="170px" class="img-fluid">
+        </div>
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
           <p class="mb-0 phone pl-md-2">
-            <a href="Tel:+447916312844" class="mr-2"><span class="fa fa-phone mr-1"></span> +447916312844</a>
-            <a href="#"><span class="fa fa-paper-plane mr-1"></span> contact@ifixtyre.com</a>
+            <a href="Tel:+447916312844" class="mr-2"><span class="fa fa-phone mr-1"></span>
+              +447916312844</a>
+            <a href="#"><span class="fa fa-paper-plane "></span> contact@ifixtyre.com</a>
           </p>
         </div>
-        <div class="col-md-6 d-flex justify-content-md-end">
+        <div class="col-md-3 d-flex align-items-center">
           <div class="social-media">
-            <p class="mb-0 d-flex">
-              <a href="" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i
-                    class="sr-only">Facebook</i></span></a>
+            <p class="mb-0 pl-md-2 d-flex align-items-center justify-content-center">
+              <a href="" class=""><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
 
-              <a href="Surrey_chauffeur" class="d-flex align-items-center justify-content-center"><span
-                  class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+              <a href="Surrey_chauffeur" class=""><span class="fa fa-instagram"><i
+                    class="sr-only">Instagram</i></span></a>
 
             </p>
           </div>
@@ -222,24 +223,29 @@ require 'vendor/autoload.php';
       </div>
     </div>
   </div>
-  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-    <div class="container">
-      <img src="images/logo.png" alt="logo" class="img-fluid" width="120px" height="120px">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-        aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="fa fa-bars"></span> Menu
+  <!-- ========== Start Section ========== -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand font-weight-bold " href="#">For Emergency</a>
+      <div class="btn btn-warning button"><a href="tel:+447916312844">+447916312844</a></div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="ftco-nav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item "><a href="index.html" class="nav-link">Home</a></li>
-          <li class="nav-item "><a href="mobiletyrefitting.html" class="nav-link">Mobile Tyre Fitting</a></li>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+          </li>
 
-          <li class="nav-item "><a href="breakdown.html" class="nav-link">BreakDown</a></li>
+          <li class="nav-item "><a href="mobiletyrefitting.html" class="nav-link">Mobile Tyre
+              Fitting</a></li>
+
+          <li class="nav-item"><a href="breakdown.html" class="nav-link">BreakDown</a></li>
           <li class="nav-item "><a href="jumpstart.html" class="nav-link">Jumpstart</a></li>
-          <li class="nav-item"><a href="about.html" class="nav-link">About US</a></li>
+
           <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-          <li class="nav-item active"><a href="contact.php" class="nav-link">Contact Us</a></li>
-          <!-- <li class="nav-item"><a href="" class="nav-link">Contact</a></li> -->
+          <li class="nav-item active "><a href="contact.php" class="nav-link">Contact Us</a></li>
         </ul>
       </div>
     </div>
@@ -293,7 +299,7 @@ require 'vendor/autoload.php';
                     <span class="fa fa-phone"></span>
                   </div>
                   <div class="text">
-                    <p><span>Phone:</span> <a href="tel://1234567920">+ 1235 2355 98</a></p>
+                    <p><span>Phone:</span> <a href="tel://1234567920">+447916312844</a></p>
                   </div>
                 </div>
               </div>
@@ -303,7 +309,7 @@ require 'vendor/autoload.php';
                     <span class="fa fa-paper-plane"></span>
                   </div>
                   <div class="text">
-                    <p><span>Email:</span> <a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
+                    <p><span>Email:</span> <a href="mailto:info@yoursite.com">gmail</a></p>
                   </div>
                 </div>
               </div>
@@ -313,7 +319,7 @@ require 'vendor/autoload.php';
                     <span class="fa fa-globe"></span>
                   </div>
                   <div class="text">
-                    <p><span>Website</span> <a href="#">yoursite.com</a></p>
+                    <p><span>Website</span> <a href="#">info@ifixtyre.com</a></p>
                   </div>
                 </div>
               </div>
@@ -407,9 +413,9 @@ require 'vendor/autoload.php';
             <ul>
               <li><span class="icon fa fa-map"></span><span class="text"> 10-16 tiller road, canary wharf, E14
                   8PX</span></li>
-              <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+44 492 3429
-                    410</span></a></li>
-              <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@tyrefix.com</span></a>
+              <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+447916312844</span></a></li>
+              <li><a href="#"><span class="icon fa fa-paper-plane"></span><span
+                    class="text">info@ifixtyre.com</span></a>
               </li>
             </ul>
           </div>
@@ -419,7 +425,7 @@ require 'vendor/autoload.php';
         <div class="col-md-12 text-center">
           <p class="copyright">
             Copyright &copy;
-            <script>document.write(new Date().getFullYear());</script> Tyre Fix All rights reserved
+            <script>document.write(new Date().getFullYear());</script> I Fix Tyre All rights reserved
           </p>
         </div>
       </div>
@@ -454,61 +460,12 @@ require 'vendor/autoload.php';
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
 
 
 
 </body>
 
 </html>
-<?php
-
-if (isset($_POST["register"])) {
-  $name = mysqli_real_escape_string($con, $_POST['name']);
-  $email = mysqli_real_escape_string($con, $_POST['email']);
-  $phone = mysqli_real_escape_string($con, $_POST['phone']);
-  $car = mysqli_real_escape_string($con, $_POST['car']);
-  $comments = $_POST['comments'];
-
-
-  $query = "INSERT INTO tyre1(`name`, `email`, `phone`, `model`, `message` ) VALUES ('$name','$email','$phone','$car', '$comments')";
-  $data = mysqli_query($con, $query);
-
-  if ($data) {
-    //Create an instance; passing `true` enables exceptions
-    $mail = new PHPMailer(true);
-
-    try {
-      //Server settings
-
-      $mail->isSMTP(); //Send using SMTP
-      $mail->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
-      $mail->SMTPAuth = true; //Enable SMTP authentication
-      $mail->Username = 'tahirbinkhadim@gmail.com'; //SMTP username
-      $mail->Password = 'qsnawvqidgmptzne'; //SMTP password
-      $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //Enable implicit TLS encryption
-      $mail->Port = 465; //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-
-      //Recipients
-      $mail->setFrom('tahirbinkhadim@gmail.com');
-      $mail->addAddress('momistheboss10@gmail.com');
-
-
-      //Content
-      $mail->isHTML(true); //Set email format to HTML
-      $mail->Subject = 'Customer data';
-      $mail->Body = "<b>New customer send his data kindly check</b> 
-            name:$name <br> email is:$email  <br> phone no: $phone <br> car modedl is: $car <br> message: $comments";
-      $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
-
-      $mail->send();
-
-    } catch (Exception $e) {
-      echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-    }
-    echo "<script> alert('Thank You for Contacting Us')</script>";
-  } else {
-    // echo " Something went wrong";
-  }
-} else {
-  // echo "data not saved";
-}
