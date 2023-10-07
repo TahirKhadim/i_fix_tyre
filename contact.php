@@ -1,4 +1,20 @@
+<?php
 
+
+include("connection.php");
+//Import PHPMailer classes into the global namespace
+//These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+
+
+
+
+
+//Load Composer's autoloader
+require 'vendor/autoload.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -120,7 +136,7 @@
       position: absolute;
       width: 70px;
       height: 70px;
-      background: #08ec2b;
+      background: #a71930;
       bottom: 0;
       border: 3px solid rgb(249, 249, 249);
       border-radius: 50%;
@@ -159,6 +175,7 @@
     .floating-container .float-element .material-icons {
       vertical-align: middle;
       font-size: 16px;
+
     }
 
     .floating-container .float-element:nth-child(1) {
@@ -189,6 +206,40 @@
     .navbar-brand {
       font-size: 3vh;
     }
+
+    .wrap .top a,
+    span {
+      color: black;
+    }
+
+    #background {
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      height: 143%;
+
+    }
+
+    .dbox .icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #a71930;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+
+    .text p a {
+      color: #a71930;
+    }
+
+    .text p {
+      color: #a71930;
+    }
+
+    button {
+      background-color: #a71930;
+      ;
+    }
   </style>
   <!--  End call svg Styling -->
 
@@ -196,38 +247,26 @@
 
 <body>
 
-  <div class="wrap">
+  <div class="wrap" style="background-color:#a71930;">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-md-3 d-flex align-items-center justify-content-around">
-          <img src="images/logo.png" alt="" width="170px" class="img-fluid">
-        </div>
-        <div class="col-md-6 d-flex align-items-center justify-content-center">
+        <div class="col-lg-6   col-sm-12 text-sm-center text-lg-end m-auto  top">
           <p class="mb-0 phone pl-md-2">
-            <a href="Tel:+447916312844" class="mr-2"><span class="fa fa-phone mr-1"></span>
+            <a href="Tel:+447916312844" class="mr-2 text-white " style="font-size:3vh;"><span class=" fa fa-phone
+              mr-1"></span>
               +447916312844</a>
-            <a href="#"><span class="fa fa-paper-plane "></span> contact@ifixtyre.com</a>
+            <a href="#" style="font-size:3vh;" class="text-white"><span class="fa fa-paper-plane mr-1  "></span>
+              contact@ifixtyre.com</a>
           </p>
         </div>
-        <div class="col-md-3 d-flex align-items-center">
-          <div class="social-media">
-            <p class="mb-0 pl-md-2 d-flex align-items-center justify-content-center">
-              <a href="" class=""><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
 
-              <a href="Surrey_chauffeur" class=""><span class="fa fa-instagram"><i
-                    class="sr-only">Instagram</i></span></a>
-
-            </p>
-          </div>
-        </div>
       </div>
     </div>
   </div>
   <!-- ========== Start Section ========== -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg  navbar-dark  " style="background-color: #000000;">
     <div class="container-fluid">
-      <a class="navbar-brand font-weight-bold " href="#">For Emergency</a>
-      <div class="btn btn-warning button"><a href="tel:+447916312844">+447916312844</a></div>
+      <a class="navbar-brand" href="#"><img src="images/logo.png" alt="pic" width="150"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -235,17 +274,21 @@
       <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
         <ul class="navbar-nav ">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active  font-weight-bold " aria-current="page" href="index.html">Home</a>
           </li>
 
-          <li class="nav-item "><a href="mobiletyrefitting.html" class="nav-link">Mobile Tyre
+          <li class="nav-item"><a href="mobiletyrefitting.html" class="nav-link active  font-weight-bold">Mobile
+              Tyre
               Fitting</a></li>
 
-          <li class="nav-item"><a href="breakdown.html" class="nav-link">BreakDown</a></li>
-          <li class="nav-item "><a href="jumpstart.html" class="nav-link">Jumpstart</a></li>
+          <li class="nav-item"><a href="locking wheel nut.html" class="nav-link active font-weight-bold">Locking
+              Wheel Nut Removal</a></li>
+          <li class="nav-item "><a href="mobile tyre repair.html" class="nav-link active font-weight-bold">Mobile
+              Tyre Repair</a></li>
 
-          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-          <li class="nav-item active "><a href="contact.php" class="nav-link">Contact Us</a></li>
+          <!--<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li> -->
+          <li class="nav-item "><a href="contact.php" class="nav-link active font-weight-bold">Contact
+              Us</a></li>
         </ul>
       </div>
     </div>
@@ -254,12 +297,14 @@
   <section class="hero-wrap hero-wrap-2" style="background-image: url('pics/contact.jpg'); height: 100vh;"
     data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
-    <div class="container">
-      <div class="row no-gutters slider-text align-items-center text-center ">
-        <div class="col-md-12 ftco-animate ">
-          <h1 class="mb-0 bread mt-5"
-            style="color: #ffc436; text-shadow: 5px 5px 8px #070707; font-weight: bold; font-size: 12vh;">Contact US
-          </h1>
+    <div class="container-fluid">
+      <div class="row  slider-text align-items-center text-center ">
+        <div id="background">
+          <div class="col-md-12 ftco-animate ">
+            <h1 class="mb-0 bread mt-5"
+              style="color: #ffffff; text-shadow: 5px 5px 8px #070707; font-weight: bold; font-size: 12vh;">Contact US
+            </h1>
+          </div>
         </div>
       </div>
     </div>
@@ -356,7 +401,7 @@
 </textarea>
                       </div>
 
-                      <button name="register" class="btn btn-success mt-3">Send Message</button>
+                      <button name="register" class=" btn btn-danger mt-3">Send Message</button>
                     </form>
                   </div>
                   <div class="col-lg-6 col-sm-12 mt-5 pt-4">
@@ -380,43 +425,65 @@
   </section>
 
 
+  <div class="floating-container">
+    <a href="Tel:+447916312844">
+      <div class="floating-button"><svg style="height: 50px; width: 50px;" xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24" id="Phone">
+          <g data-name="Layer 2" fill="#ffd903" class="color000000 svgShape">
+            <g data-name="phone" fill="#ffd903" class="color000000 svgShape">
+              <rect width="10px" height="10px" opacity="0" fill="#ffd903" class="color000000 svgShape"></rect>
+              <path
+                d="M17.4 22A15.42 15.42 0 0 1 2 6.6 4.6 4.6 0 0 1 6.6 2a3.94 3.94 0 0 1 .77.07 3.79 3.79 0 0 1 .72.18 1 1 0 0 1 .65.75l1.37 6a1 1 0 0 1-.26.92c-.13.14-.14.15-1.37.79a9.91 9.91 0 0 0 4.87 4.89c.65-1.24.66-1.25.8-1.38a1 1 0 0 1 .92-.26l6 1.37a1 1 0 0 1 .72.65 4.34 4.34 0 0 1 .19.73 4.77 4.77 0 0 1 .06.76A4.6 4.6 0 0 1 17.4 22z"
+                fill="#fff" class="color000000 svgShape"></path>
+            </g>
+          </g>
+        </svg></div>
+    </a>
+    <div class="element-container">
 
+
+
+    </div>
+  </div>
   <!-- End Call SVG -->
-  <footer class="footer">
+  <footer class="footer" style="background-color: #000000;">
     <div class="container">
       <div class="row">
         <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-          <h2 class="footer-heading">TyreFix</h2>
-          <p>"Revive, Refuel, and Roll - Your TyreFix Roadside Savior".</p>
+          <h2 class="footer-heading text-white">TyreFix</h2>
+          <h6 class="text-white">"Revive, Refuel, and Roll - Your TyreFix Roadside Savior".</h6>
           <ul class="ftco-footer-social p-0">
             <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span
-                  class="fa fa-twitter"></span></a></li>
+                  class="fa fa-twitter text-white"></span></a></li>
             <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span
-                  class="fa fa-facebook"></span></a></li>
+                  class="fa fa-facebook text-white"></span></a></li>
             <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span
-                  class="fa fa-instagram"></span></a></li>
+                  class="fa fa-instagram text-white"></span></a></li>
           </ul>
         </div>
         <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
         </div>
         <div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
-          <h2 class="footer-heading">Quick Links</h2>
+          <h2 class="footer-heading text-white">Quick Links</h2>
           <ul class="list-unstyled">
-            <li><a href="index.html" class="py-2 d-block">Home</a></li>
-            <li><a href="services.html" class="py-2 d-block">Services</a></li>
-            <li><a href="contact.php" class="py-2 d-block">Contact</a></li>
+            <li><a href="index.html" class="py-2 d-block text-white">Home</a></li>
+            <li><a href="services.html" class="py-2 d-block text-white">Services</a></li>
+            <li><a href="contact.php" class="py-2 d-block text-white">Contact</a></li>
           </ul>
         </div>
         <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
-          <h2 class="footer-heading">Where We Are?</h2>
+          <h2 class="footer-heading text-white">Where We Are?</h2>
           <div class="block-23 mb-3">
             <ul>
-              <li><span class="icon fa fa-map"></span><span class="text"> 10-16 tiller road, canary wharf, E14
-                  8PX</span></li>
-              <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+447916312844</span></a></li>
-              <li><a href="#"><span class="icon fa fa-paper-plane"></span><span
-                    class="text">info@ifixtyre.com</span></a>
-              </li>
+              <li><span class="icon fa fa-map text-white"></span><span class="text text-white	"> 10-16
+                  tiller
+                  road,
+                  canary wharf,
+                  E14 8PX</span></li>
+              <li><a href="tel:+447916312844"><span class="icon fa fa-phone text-white"></span><span
+                    class="text text-white">+447916312844</span></a></li>
+              <li><a href="#"><span class="icon fa fa-paper-plane text-white"></span><span
+                    class="text text-white">info@ifixtyre.com</span></a></li>
             </ul>
           </div>
         </div>
@@ -469,3 +536,55 @@
 </body>
 
 </html>
+<?php
+
+if (isset($_POST["register"])) {
+  $name = mysqli_real_escape_string($con, $_POST['name']);
+  $email = mysqli_real_escape_string($con, $_POST['email']);
+  $phone = mysqli_real_escape_string($con, $_POST['phone']);
+  $car = mysqli_real_escape_string($con, $_POST['car']);
+  $comments = $_POST['comments'];
+
+
+  $query = "INSERT INTO tyre1(`name`, `email`, `phone`, `model`, `message` ) VALUES ('$name','$email','$phone','$car', '$comments')";
+  $data = mysqli_query($con, $query);
+
+  if ($data) {
+    //Create an instance; passing `true` enables exceptions
+    $mail = new PHPMailer(true);
+
+    try {
+      //Server settings
+
+      $mail->isSMTP(); //Send using SMTP
+      $mail->Host = 'smtp.gmail.com'; //Set the SMTP server to send through
+      $mail->SMTPAuth = true; //Enable SMTP authentication
+      $mail->Username = 'tahirbinkhadim@gmail.com'; //SMTP username
+      $mail->Password = 'qsnawvqidgmptzne'; //SMTP password
+      $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; //Enable implicit TLS encryption
+      $mail->Port = 465; //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
+      //Recipients
+      $mail->setFrom('tahirbinkhadim@gmail.com');
+      $mail->addAddress('momistheboss10@gmail.com');
+
+
+      //Content
+      $mail->isHTML(true); //Set email format to HTML
+      $mail->Subject = 'Customer data';
+      $mail->Body = "<b>New customer send his data kindly check</b> 
+            name:$name <br> email is:$email  <br> phone no: $phone <br> car modedl is: $car <br> message: $comments";
+      $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+      $mail->send();
+
+    } catch (Exception $e) {
+      echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+    }
+    echo "<script> alert('Thank You for Contacting Us')</script>";
+  } else {
+    // echo " Something went wrong";
+  }
+} else {
+  // echo "data not saved";
+}
