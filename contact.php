@@ -136,7 +136,7 @@ require 'vendor/autoload.php';
       position: absolute;
       width: 70px;
       height: 70px;
-      background: #a71930;
+      background: #00BD56;
       bottom: 0;
       border: 3px solid rgb(249, 249, 249);
       border-radius: 50%;
@@ -183,6 +183,10 @@ require 'vendor/autoload.php';
 
     }
 
+    /* .fa {
+      color: white;
+    } */
+
     .dbox {
       display: grid;
     }
@@ -194,9 +198,11 @@ require 'vendor/autoload.php';
     }
 
     .navbar li a {
-      font-size: 3vh;
+      font-size: 2.9vh;
+      color: #FFA1F5;
+      font-weight: 500;
 
-      margin-left: 20px;
+
     }
 
     .navbar .button {
@@ -215,7 +221,7 @@ require 'vendor/autoload.php';
     #background {
       width: 100%;
       background-color: rgba(0, 0, 0, 0.6);
-      height: 143%;
+      height: 100%;
 
     }
 
@@ -223,22 +229,37 @@ require 'vendor/autoload.php';
       width: 60px;
       height: 60px;
       border-radius: 50%;
-      background: #a71930;
+      background: #00bd56;
       margin: 0 auto;
       margin-bottom: 20px;
     }
 
     .text p a {
-      color: #a71930;
+      color: #00BD56;
     }
 
     .text p {
-      color: #a71930;
+      color: #00BD56;
     }
 
     button {
       background-color: #a71930;
       ;
+    }
+
+    .google-maps {
+      position: relative;
+      padding-bottom: 75%; // This is the aspect ratio
+      height: 0;
+      overflow: hidden;
+    }
+
+    .google-maps iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important;
+      height: 100% !important;
     }
   </style>
   <!--  End call svg Styling -->
@@ -247,15 +268,15 @@ require 'vendor/autoload.php';
 
 <body>
 
-  <div class="wrap" style="background-color:#a71930;">
+  <div class="wrap" style="background-color:#00739e;">
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-6   col-sm-12 text-sm-center text-lg-end m-auto  top">
+        <div class="col-lg-12  d-flex justify-content-end">
           <p class="mb-0 phone pl-md-2">
-            <a href="Tel:+447916312844" class="mr-2 text-white " style="font-size:3vh;"><span class=" fa fa-phone
+            <a href="Tel:+447916312844" class="mr-2 " style="font-size:3vh;"><span class=" fa fa-phone
               mr-1"></span>
               +447916312844</a>
-            <a href="#" style="font-size:3vh;" class="text-white"><span class="fa fa-paper-plane mr-1  "></span>
+            <a href="#" style="font-size:3vh;"><span class="fa fa-paper-plane mr-1 "></span>
               contact@ifixtyre.com</a>
           </p>
         </div>
@@ -264,7 +285,7 @@ require 'vendor/autoload.php';
     </div>
   </div>
   <!-- ========== Start Section ========== -->
-  <nav class="navbar navbar-expand-lg  navbar-dark  " style="background-color: #000000;">
+  <nav class="navbar navbar-expand-lg  navbar-dark  " style="background-color: #ff2d94;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="images/logo.png" alt="pic" width="150"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -274,156 +295,149 @@ require 'vendor/autoload.php';
       <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
         <ul class="navbar-nav ">
           <li class="nav-item">
-            <a class="nav-link active  font-weight-bold " aria-current="page" href="index.html">Home</a>
+            <a class="nav-link active  " aria-current="page" href="index.html">Home</a>
           </li>
 
-          <li class="nav-item"><a href="mobiletyrefitting.html" class="nav-link active  font-weight-bold">Mobile
+          <li class="nav-item"><a href="mobiletyrefitting.html" class="nav-link active  ">Mobile
               Tyre
               Fitting</a></li>
 
-          <li class="nav-item"><a href="locking wheel nut.html" class="nav-link active font-weight-bold">Locking
+          <li class="nav-item"><a href="locking wheel nut.html" class="nav-link active ">Locking
               Wheel Nut Removal</a></li>
-          <li class="nav-item "><a href="mobile tyre repair.html" class="nav-link active font-weight-bold">Mobile
+          <li class="nav-item "><a href="mobile tyre repair.html" class="nav-link active ">Mobile
               Tyre Repair</a></li>
+          <li class="nav-item "><a href="breakdown.html" class="nav-link active ">Break-Down</a></li>
+          <li class="nav-item "><a href="jumpstart.html" class="nav-link active ">Jump-Start</a></li>
 
           <!--<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li> -->
-          <li class="nav-item "><a href="contact.php" class="nav-link active font-weight-bold">Contact
+          <li class="nav-item "><a href="contact.php" class="nav-link active ">Contact
               Us</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- END nav -->
-  <section class="hero-wrap hero-wrap-2" style="background-image: url('pics/contact.jpg'); height: 100vh;"
+
+  <div class="hero-wrap js-fullheight" style="background-image: url('pics/jumpstr.png');"
     data-stellar-background-ratio="0.5">
     <div class="overlay"></div>
     <div class="container-fluid">
-      <div class="row  slider-text align-items-center text-center ">
+      <div class="row  slider-text js-fullheight align-items-start justify-content-center" data-scrollax-parent="true">
         <div id="background">
-          <div class="col-md-12 ftco-animate ">
-            <h1 class="mb-0 bread mt-5"
-              style="color: #ffffff; text-shadow: 5px 5px 8px #070707; font-weight: bold; font-size: 12vh;">Contact US
-            </h1>
+          <div class="col-md-12 ftco-animate text-center  ">
+            <h1 class="  para1 mt-3 py-5" style="color: #f5f8f9; text-shadow: 5px 5px 8px #070707;">
+              "Contact Us" </h1>
+
+            <button class="btn mt-4" style="background-color: #ff2d94; border: #ff2d94;"><a href="#readmore">Send
+                Meassage</a></button>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- END nav -->
+
+
+  <!-- social icons -->
+
+  <div class="container mt-5">
+    <div class="row mb-5">
+      <div class="col-md-3">
+        <div class="dbox w-100 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="fa fa-map-marker text-white"></span>
+          </div>
+          <div class="text">
+            <p><span>Address:</span>10-16 tiller road, canary wharf,
+              E14 8PX</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="dbox w-100 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="fa fa-phone text-white"></span>
+          </div>
+          <div class="text">
+            <p><span>Phone:</span> <a href="tel:+447916312844">+447916312844</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="dbox w-100 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="fa fa-paper-plane text-white"></span>
+          </div>
+          <div class="text">
+            <p><span>Email:</span> <a href="contact@ifixtyre.com">contact@ifixtyre.com</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="dbox w-100 text-center">
+          <div class="icon d-flex align-items-center justify-content-center">
+            <span class="fa fa-globe text-white"></span>
+          </div>
+          <div class="text">
+            <p><span>Website:</span> <a href="info@ifixtyre.com">info@ifixtyre.com</a></p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="ftco-section bg-light">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-md-6 text-center mb-5">
-          <h2 class="heading-section"></h2>
-        </div>
-      </div>
-      <div class="row justify-content-center">
-        <div class="col-md-12">
-          <div class="wrapper">
+  <!-- form -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-sm-12 mt-3">
+        <form action=" " method="POST">
+          <h2 class="mt-3" id="readmore">We're Ready, Let's Talk.</h2>
+          <div class="mb-2">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="name">
 
           </div>
+          <div class="mb-2">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          </div>
+          <div class="mb-2">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="number" class="form-control" id="name" aria-describedby="emailHelp" name="phone">
 
+          </div>
+          <div class="mb-2">
+            <label for="model" class="form-label">Car Make & Model</label>
+            <input type="model" class="form-control" id="model" name="car">
+          </div>
 
-
-          <div class="container">
-            <div class="row mb-5">
-              <div class="col-md-3">
-                <div class="dbox w-100 text-center">
-                  <div class="icon d-flex align-items-center justify-content-center">
-                    <span class="fa fa-map-marker"></span>
-                  </div>
-                  <div class="text">
-                    <p><span>Address:</span>10-16 tiller road, canary wharf,
-                      E14 8PX</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="dbox w-100 text-center">
-                  <div class="icon d-flex align-items-center justify-content-center">
-                    <span class="fa fa-phone"></span>
-                  </div>
-                  <div class="text">
-                    <p><span>Phone:</span> <a href="tel://1234567920">+447916312844</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="dbox w-100 text-center">
-                  <div class="icon d-flex align-items-center justify-content-center">
-                    <span class="fa fa-paper-plane"></span>
-                  </div>
-                  <div class="text">
-                    <p><span>Email:</span> <a href="mailto:info@yoursite.com">gmail</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="dbox w-100 text-center">
-                  <div class="icon d-flex align-items-center justify-content-center">
-                    <span class="fa fa-globe"></span>
-                  </div>
-                  <div class="text">
-                    <p><span>Website</span> <a href="#">info@ifixtyre.com</a></p>
-                  </div>
-                </div>
-              </div>
-              <div class="container">
-                <div class="row">
-                  <div class="col-lg-6 col-sm-12 mt-3">
-                    <form action=" " method="POST">
-                      <h2 class="mt-3">We're Ready, Let's Talk.</h2>
-                      <div class="mb-2">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="name">
-
-                      </div>
-                      <div class="mb-2">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                          name="email">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                      </div>
-                      <div class="mb-2">
-                        <label for="phone" class="form-label">Phone</label>
-                        <input type="number" class="form-control" id="name" aria-describedby="emailHelp" name="phone">
-
-                      </div>
-                      <div class="mb-2">
-                        <label for="model" class="form-label">Car Make & Model</label>
-                        <input type="model" class="form-control" id="model" name="car">
-                      </div>
-
-                      <div class="mb-2">
-                        <label for="model" class="form-label">Message</label>
-                        <textarea name="comments" id="para1">
+          <div class="mb-2">
+            <label for="model" class="form-label">Message</label>
+            <textarea name="comments" id="para1">
 
 </textarea>
-                      </div>
-
-                      <button name="register" class=" btn btn-danger mt-3">Send Message</button>
-                    </form>
-                  </div>
-                  <div class="col-lg-6 col-sm-12 mt-5 pt-4">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.927559908779!2d-0.027370024580980177!3d51.496196811523205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487602c0671641a1%3A0x266a92454825f03e!2s10%2C%2016%20Tiller%20Rd%2C%20London%20E14%208PX%2C%20UK!5e0!3m2!1sen!2s!4v1695897928631!5m2!1sen!2s"
-                      width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"></iframe>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
+
+          <button name="register" class="btn mt-3" style="background:#ff2d94;">Send Message</button>
+        </form>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 mt-5 pt-4">
+        <div class="google-maps">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.927559908779!2d-0.027370024580980177!3d51.496196811523205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487602c0671641a1%3A0x266a92454825f03e!2s10%2C%2016%20Tiller%20Rd%2C%20London%20E14%208PX%2C%20UK!5e0!3m2!1sen!2s!4v1695897928631!5m2!1sen!2s"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
       </div>
     </div>
-    </div>
-    </div>
-    </div>
-    </div>
-  </section>
+  </div>
 
+
+  <!-- ambed map -->
 
   <div class="floating-container">
     <a href="Tel:+447916312844">
@@ -446,32 +460,40 @@ require 'vendor/autoload.php';
     </div>
   </div>
   <!-- End Call SVG -->
-  <footer class="footer" style="background-color: #000000;">
+  <footer class="footer" style="background-color: #00739e;">
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+        <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
           <h2 class="footer-heading text-white">TyreFix</h2>
           <h6 class="text-white">"Revive, Refuel, and Roll - Your TyreFix Roadside Savior".</h6>
           <ul class="ftco-footer-social p-0">
-            <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Twitter"><span
-                  class="fa fa-twitter text-white"></span></a></li>
-            <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span
-                  class="fa fa-facebook text-white"></span></a></li>
-            <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span
-                  class="fa fa-instagram text-white"></span></a></li>
+            <li class="ftco-animate" style="background-color: #ffffff; border-radius: 50%;"><a href="#"
+                data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-twitter"
+                  style="color: #00BD56; background-color:"></span></a></li>
+            <li class="ftco-animate" style="background-color: #ffffff; border-radius: 50%;"><a
+                href="https://www.facebook.com/profile.php?id=61552200209780" data-toggle="tooltip" data-placement="top"
+                title="Facebook"><span class="fa fa-facebook" style="color: #00BD56;"></span></a></li>
+            <li class="ftco-animate" style="background-color: #ffffff; border-radius: 50%;"><a
+                href="https://www.instagram.com/ifixtyre/" data-toggle="tooltip" data-placement="top"
+                title="Instagrm"><span class="fa fa-facebook" style="color: #00BD56;"></span></a></li>
+            <li class="ftco-animate" style="background-color: #ffffff; border-radius: 50%;"><a
+                href="https://www.linkedin.com/feed/" data-toggle="tooltip" data-placement="top" title="Linkedin"><span
+                  class="fa fa-linkedin" style="color: #00BD56;"></span></a></li>
+
+
           </ul>
         </div>
-        <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+        <div class=" col-md-6 col-lg-4 mb-4 mb-md-0">
         </div>
-        <div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
+        <div class="col-md-6 col-lg-4 pl-lg-5 mb-4 mb-md-0">
           <h2 class="footer-heading text-white">Quick Links</h2>
           <ul class="list-unstyled">
             <li><a href="index.html" class="py-2 d-block text-white">Home</a></li>
-            <li><a href="services.html" class="py-2 d-block text-white">Services</a></li>
+
             <li><a href="contact.php" class="py-2 d-block text-white">Contact</a></li>
           </ul>
         </div>
-        <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+        <div class="col-md-6 col-lg-4 mb-4 mb-md-0">
           <h2 class="footer-heading text-white">Where We Are?</h2>
           <div class="block-23 mb-3">
             <ul>
@@ -488,9 +510,9 @@ require 'vendor/autoload.php';
           </div>
         </div>
       </div>
-      <div class="row mt-5">
+      <div class="row mt-3">
         <div class="col-md-12 text-center">
-          <p class="copyright">
+          <p class="copyright" style="color: #ffffff;">
             Copyright &copy;
             <script>document.write(new Date().getFullYear());</script> I Fix Tyre All rights reserved
           </p>
