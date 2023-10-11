@@ -268,54 +268,56 @@ require 'vendor/autoload.php';
 
 <body>
 
-  <div class="wrap" style="background-color:#00739e;">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12  d-flex justify-content-end">
-          <p class="mb-0 phone pl-md-2">
-            <a href="Tel:+447916312844" class="mr-2 " style="font-size:3vh;"><span class=" fa fa-phone
-              mr-1"></span>
-              +447916312844</a>
-            <a href="#" style="font-size:3vh;"><span class="fa fa-paper-plane mr-1 "></span>
-              contact@ifixtyre.com</a>
-          </p>
-        </div>
+<div class="wrap" style="background-color:#00739e;">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12  d-flex justify-content-end">
+					<p class="mb-0 phone pl-md-2">
+						<a href="Tel:+447916312844" class="mr-2 " style="font-size:3vh;"><span class=" fa fa-phone
+				  mr-1"></span>
+							+447916312844</a>
+						<a href="contact@ifixtyre.com" style="font-size:3vh;"><span
+								class="fa fa-paper-plane mr-1 "></span>
+							contact@ifixtyre.com</a>
+					</p>
+				</div>
 
-      </div>
-    </div>
-  </div>
-  <!-- ========== Start Section ========== -->
-  <nav class="navbar navbar-expand-lg  navbar-dark  " style="background-color: #ff2d94;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="images/logo.png" alt="pic" width="150"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-        <ul class="navbar-nav ">
-          <li class="nav-item">
-            <a class="nav-link active  " aria-current="page" href="index.html">Home</a>
-          </li>
+			</div>
+		</div>
+	</div>
 
-          <li class="nav-item"><a href="mobiletyrefitting.html" class="nav-link active  ">Mobile
-              Tyre
-              Fitting</a></li>
+	<nav class="navbar navbar-expand-lg  navbar-dark  " style="background-color: #ff2d94;">
+		<div class="container-fluid">
+			<img src="pics/logo3__1_-removebg-preview.png" alt="pic" width="80px">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+				<ul class="navbar-nav ">
+					<li class="nav-item">
+						<a class="nav-link active  " aria-current="page" href="index.html">Home</a>
+					</li>
 
-          <li class="nav-item"><a href="locking wheel nut.html" class="nav-link active ">Locking
-              Wheel Nut Removal</a></li>
-          <li class="nav-item "><a href="mobile tyre repair.html" class="nav-link active ">Mobile
-              Tyre Repair</a></li>
-          <li class="nav-item "><a href="breakdown.html" class="nav-link active ">Break-Down</a></li>
-          <li class="nav-item "><a href="jumpstart.html" class="nav-link active ">Jump-Start</a></li>
+					<li class="nav-item"><a href="mobiletyrefitting.html" class="nav-link active  ">Mobile
+							Tyre
+							Fitting</a></li>
 
-          <!--<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li> -->
-          <li class="nav-item "><a href="contact.php" class="nav-link active ">Contact
-              Us</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+					<li class="nav-item"><a href="locking wheel nut.html" class="nav-link active ">Locking
+							Wheel Nut Removal</a></li>
+					<li class="nav-item "><a href="mobile tyre repair.html" class="nav-link active ">Mobile
+							Tyre Repair</a></li>
+					<li class="nav-item "><a href="breakdown.html" class="nav-link active ">Break-Down</a></li>
+					<li class="nav-item "><a href="jumpstart.html" class="nav-link active ">Jump-Start</a></li>
+
+					<!--<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li> -->
+					<li class="nav-item "><a href="contact.php" class="nav-link active ">Contact
+							Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
   <div class="hero-wrap js-fullheight" style="background-image: url('pics/jumpstr.png');"
     data-stellar-background-ratio="0.5">
@@ -467,15 +469,15 @@ require 'vendor/autoload.php';
           <h2 class="footer-heading text-white">TyreFix</h2>
           <h6 class="text-white">"Revive, Refuel, and Roll - Your TyreFix Roadside Savior".</h6>
           <ul class="ftco-footer-social p-0">
-            <li class="ftco-animate" style="background-color: #ffffff; border-radius: 50%;"><a href="#"
-                data-toggle="tooltip" data-placement="top" title="Twitter"><span class="fa fa-twitter"
-                  style="color: #00BD56; background-color:"></span></a></li>
+            <li class="ftco-animate" style="background-color: #ffffff; border-radius: 50%;"><a
+                href="https://twitter.com/home" data-toggle="tooltip" data-placement="top" title="Twitter"><span
+                  class="fa fa-twitter" style="color: #00BD56; background-color:"></span></a></li>
             <li class="ftco-animate" style="background-color: #ffffff; border-radius: 50%;"><a
                 href="https://www.facebook.com/profile.php?id=61552200209780" data-toggle="tooltip" data-placement="top"
                 title="Facebook"><span class="fa fa-facebook" style="color: #00BD56;"></span></a></li>
             <li class="ftco-animate" style="background-color: #ffffff; border-radius: 50%;"><a
                 href="https://www.instagram.com/ifixtyre/" data-toggle="tooltip" data-placement="top"
-                title="Instagrm"><span class="fa fa-facebook" style="color: #00BD56;"></span></a></li>
+                title="Instagrm"><span class="fa fa-instagram" style="color: #00BD56;"></span></a></li>
             <li class="ftco-animate" style="background-color: #ffffff; border-radius: 50%;"><a
                 href="https://www.linkedin.com/feed/" data-toggle="tooltip" data-placement="top" title="Linkedin"><span
                   class="fa fa-linkedin" style="color: #00BD56;"></span></a></li>
